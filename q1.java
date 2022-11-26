@@ -3,7 +3,6 @@ import java.util.*;
 public class q1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Enter the value of x and y");
 		Scanner sc = new Scanner(System.in);
 		
