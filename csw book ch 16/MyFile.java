@@ -1,3 +1,4 @@
+import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.FileOutputStream;
 
@@ -7,13 +8,13 @@ public class MyFile {
 		DataInputStream dis=new DataInputStream(System.in);
 		try {
 			FileOutputStream fout=new FileOutputStream("D://35/Java_Practice/src/MyFile.txt");
-			
-			System.out.println("Enter text(@ at the end)");
+			BufferedOutputStream bout=new BufferedOutputStream(fout,1024);
+			System.out.println("Enter text(@ at the end): ");
 			char ch;
 			while((ch=(char)dis.read())!='@') {
-				fout.write(ch);
+				bout.write(ch);
 			}
-			fout.close();
+			bout.close();
 		}
 		catch(Exception e) {System.out.println(e);}
 
